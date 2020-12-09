@@ -3,14 +3,14 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 project("webbrowser")
 
-find_program(INTLTOOL_MERGE intltool-merge)
-if(NOT INTLTOOL_MERGE)
-    message(FATAL_ERROR "Could not find intltool-merge, please install the intltool package")
-endif()
-find_program(INTLTOOL_EXTRACT intltool-extract)
-if(NOT INTLTOOL_EXTRACT)
-    message(FATAL_ERROR "Could not find intltool-extract, please install the intltool package")
-endif()
+#find_program(INTLTOOL_MERGE intltool-merge)
+#if(NOT INTLTOOL_MERGE)
+#    message(FATAL_ERROR "Could not find intltool-merge, please install the intltool package")
+#endif()
+#find_program(INTLTOOL_EXTRACT intltool-extract)
+#if(NOT INTLTOOL_EXTRACT)
+#    message(FATAL_ERROR "Could not find intltool-extract, please install the intltool package")
+#endif()
 
 option(CLICK_MODE "Build as a click package" off)
 
@@ -88,9 +88,9 @@ add_custom_target(NON_COMPILED_TARGET ALL SOURCES ${NON_COMPILED_ROOT} ${NON_COM
 # (regarding syntax consistency, see http://pad.lv/1181187)
 set (GETTEXT_PACKAGE "morph-browser")
 
-add_subdirectory(po)
+#add_subdirectory(po)
 
-add_subdirectory(doc)
+#add_subdirectory(doc)
 
 install(FILES morph-browser.png screenshot.png
 DESTINATION ${CMAKE_INSTALL_DATADIR}/morph-browser)

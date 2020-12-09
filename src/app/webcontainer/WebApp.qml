@@ -17,12 +17,12 @@
  */
 
 import QtQuick 2.5
-import QtWebEngine 1.7
+import QtWebEngine 1.5
 import Qt.labs.settings 1.0
 import webbrowsercommon.private 0.1
 import Morph.Web 0.1
 import Ubuntu.Components 1.3
-import Ubuntu.Unity.Action 1.1 as UnityActions
+//import Ubuntu.Unity.Action 1.1 as UnityActions
 import Ubuntu.UnityWebApps 0.1 as UnityWebApps
 import "../actions" as Actions
 import ".." as Common

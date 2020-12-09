@@ -21,7 +21,7 @@ import QtQuick.Window 2.2
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.UnityWebApps 0.1 as UnityWebApps
-import QtWebEngine 1.7
+import QtWebEngine 1.5
 import Morph.Web 0.1
 import webbrowsercommon.private 0.1
 import "../UrlUtils.js" as UrlUtils

@@ -17,9 +17,9 @@
  */
 
 import Ubuntu.Components 1.3
-import Ubuntu.Unity.Action 1.1 as UnityActions
+//import Ubuntu.Unity.Action 1.1 as UnityActions
 
-UnityActions.Action {
+Action {
     text: i18n.tr("Find in page")
     // TRANSLATORS: This is a free-form list of keywords associated to the 'Find in Page' action.
     // Keywords may actually be sentences, and must be separated by semi-colons.

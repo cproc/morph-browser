@@ -18,9 +18,9 @@
 
 import QtQuick 2.5
 import QtQuick.Window 2.2
-import QtGraphicalEffects 1.0
-import QtSystemInfo 5.5
-import QtWebEngine 1.7
+//import QtGraphicalEffects 1.0
+//import QtSystemInfo 5.5
+import QtWebEngine 1.5
 import Qt.labs.settings 1.0
 import Morph.Web 0.1
 import Ubuntu.Components 1.3
@@ -278,29 +278,29 @@ Common.BrowserView {
         }
     }
 
-    InputDeviceModel {
-        id: miceModel
-        filter: InputInfo.Mouse
-    }
-
-    InputDeviceModel {
-        id: touchPadModel
-        filter: InputInfo.TouchPad
-    }
-
-    InputDeviceModel {
-        id: touchScreenModel
-        filter: InputInfo.TouchScreen
-    }
+//    InputDeviceModel {
+//        id: miceModel
+//        filter: InputInfo.Mouse
+//    }
+//
+//    InputDeviceModel {
+//        id: touchPadModel
+//        filter: InputInfo.TouchPad
+//    }
+//
+//    InputDeviceModel {
+//        id: touchScreenModel
+//        filter: InputInfo.TouchScreen
+//    }
 
     Common.FilteredKeyboardModel {
         id: keyboardModel
     }
 
-    actions: [
+    actions: ActionList {
         Actions.GoTo {
             onTriggered: currentWebview.url = value
-        },
+        }
         Actions.Back {
             enabled: currentWebview ? currentWebview.canGoBack : false
             onTriggered: {
@@ -309,7 +309,7 @@ Common.BrowserView {
                 }
                 currentWebview.goBack()
             }
-        },
+        }
         Actions.Forward {
             enabled: currentWebview ? currentWebview.canGoForward : false
             onTriggered: {
@@ -318,22 +318,22 @@ Common.BrowserView {
                 }
                 currentWebview.goForward()
             }
-        },
+        }
         Actions.Reload {
             enabled: currentWebview
             onTriggered: currentWebview.reload()
-        },
+        }
         Actions.Bookmark {
             enabled: currentWebview
             // QtWebEngine icons are provided as e.g. image://favicon/https://duckduckgo.com/favicon.ico
             onTriggered: internal.addBookmark(currentWebview.url, currentWebview.title, (UrlUtils.schemeIs(currentWebview.icon, "image") && UrlUtils.hostIs(currentWebview.icon, "favicon")) ? currentWebview.icon.toString().substring(("image://favicon/").length) : currentWebview.icon)
-        },
+        }
         Actions.NewTab {
             onTriggered: internal.openUrlInNewTab("", true)
-        },
+        }
         Actions.ClearHistory {
             onTriggered: HistoryModel.clearAll()
-        },
+        }
         Actions.FindInPage {
             enabled: !chrome.findInPageMode && !newTabViewLoader.active
             onTriggered: {
@@ -341,7 +341,7 @@ Common.BrowserView {
                 chrome.focus = true
             }
         }
-    ]
+    }
 
     FocusScope {
         id: contentsContainer
@@ -1239,8 +1239,8 @@ Common.BrowserView {
             }
         }
 
-        readonly property bool hasMouse: (miceModel.count + touchPadModel.count) > 0
-        readonly property bool hasTouchScreen: touchScreenModel.count > 0
+        readonly property bool hasMouse: /*(miceModel.count + touchPadModel.count) > 0*/true
+        readonly property bool hasTouchScreen: /*touchScreenModel.count > 0*/true
 
         // Ref: https://code.google.com/p/chromium/codesearch#chromium/src/components/ui/zoom/page_zoom_constants.cc
         //readonly property var zoomFactors: [0.25, 0.333, 0.5, 0.666, 0.75, 0.9, 1.0, 1.1, 1.25, 1.5, 1.75, 2.0, 2.5, 3.0, 4.0, 5.0]

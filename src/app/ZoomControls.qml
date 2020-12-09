@@ -1,7 +1,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3                  // For UbuntuShape.
 import Ubuntu.Components.Popups 1.3 as Popups // For saveDialog.
-import QtWebEngine 1.7
+import QtWebEngine 1.5
 import webbrowsercommon.private 0.1           // For DomainSettingsModel singleton.
 import "UrlUtils.js" as UrlUtils
 

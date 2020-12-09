@@ -17,13 +17,13 @@
  */
 
 import QtQuick 2.4
-import QtSystemInfo 5.5
+//import QtSystemInfo 5.5
 import Ubuntu.Components 1.3
 
 SortFilterModel {
-    model: InputDeviceModel {
-        filter: InputInfo.Keyboard
-    }
+//    model: InputDeviceModel {
+//        filter: InputInfo.Keyboard
+//    }
     filter {
         // Filter out autopilot-emulated keyboards
         // (see https://launchpad.net/bugs/1542224).

@@ -18,7 +18,7 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import QtGraphicalEffects 1.0
+//import QtGraphicalEffects 1.0
 
 Rectangle {
     id: toolbar
@@ -35,11 +35,11 @@ Rectangle {
         asynchronous: true
     }
     
-    ColorOverlay {
-        anchors.fill: bug
-        source: bug
-        color: theme.palette.normal.background
-    }
+//    ColorOverlay {
+//        anchors.fill: bug
+//        source: bug
+//        color: theme.palette.normal.background
+//    }
 
     states: [
         State {

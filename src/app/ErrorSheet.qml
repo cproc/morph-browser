@@ -18,7 +18,7 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import QtWebEngine 1.7
+import QtWebEngine 1.5
 
 Rectangle {
     property string url

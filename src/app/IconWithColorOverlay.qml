@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.6
-import QtGraphicalEffects 1.0
+//import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.3
 
 Item {

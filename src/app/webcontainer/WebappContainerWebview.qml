@@ -19,7 +19,7 @@
 import QtQuick 2.4
 import QtQuick.Window 2.2
 import Ubuntu.Components 1.3
-import Ubuntu.Unity.Action 1.1 as UnityActions
+//import Ubuntu.Unity.Action 1.1 as UnityActions
 import Ubuntu.UnityWebApps 0.1 as UnityWebApps
 import "../actions" as Actions
 import "../UrlUtils.js" as UrlUtils
